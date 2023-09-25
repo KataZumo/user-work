@@ -1,0 +1,24 @@
+{
+  "name": "user-work",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "server": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-generator": "^4.14.1",
+    "http-errors": "~1.6.3",
+    "jade": "^1.9.2",
+    "morgan": "~1.9.1",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.3.1"
+  }
+}
