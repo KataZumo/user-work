@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button, Form } from 'antd'
 
 type Props = {
@@ -8,14 +7,14 @@ type Props = {
     type?: "link" | "text" | "default" | "primary" | "dashed" | undefined;
     danger?: boolean | undefined;
     loading?: boolean | undefined;
-    shape?:"default" | "circle" | "round" | undefined;
+    shape?: "default" | "circle" | "round" | undefined;
     icon?: React.ReactNode;
 }
 
 export const CustomButton: React.FC<Props> = ({ children, htmlType, type, danger, loading, shape, icon, onClick  }) => {
   return (
     <Form.Item>
-        <Button 
+      <Button 
         htmlType={ htmlType } 
         type={ type }
         danger={ danger }
@@ -23,8 +22,9 @@ export const CustomButton: React.FC<Props> = ({ children, htmlType, type, danger
         shape={shape}
         icon={icon}
         onClick={onClick}
-    >{children}
-        </Button>
+      >
+        {children}
+      </Button>
     </Form.Item>
   )
 }

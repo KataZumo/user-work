@@ -1,13 +1,14 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import reportWebVitals from './reportWebVitals';
-import { Paths } from './paths';
-import { Login } from './pages/login/login';
-import { Register } from './pages/register/register';
-import './index.css';
+import React from "react";
+import { ConfigProvider, theme } from "antd";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import { Paths } from "./paths";
+import { Login } from "./pages/login/login";
+import { Register } from "./pages/register/register";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -21,17 +22,18 @@ const router = createBrowserRouter([
   {
     path: Paths.register,
     element: <Register />,
-  }
+  },
 ]);
 
-
-const container = document.getElementById('root')!;
+const container = document.getElementById("root")!;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+        <RouterProvider router={router} />
+      </ConfigProvider>
     </Provider>
   </React.StrictMode>
 );
